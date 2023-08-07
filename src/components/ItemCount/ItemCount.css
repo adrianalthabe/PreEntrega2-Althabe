@@ -1,0 +1,44 @@
+.Counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+  }
+  
+  .Controls {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+  }
+  
+  .Button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #f384e4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .Button:hover {
+    background-color: #6cebfb;
+  }
+  
+  .Number {
+    font-size: 24px;
+    margin: 0 20px;
+  }
+  
+  /* Disable button styles */
+  .Button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Add some spacing to the "Agregar al carrito" button */
+  div > .Button:last-child {
+    margin-top: 10px;
+  }
+  

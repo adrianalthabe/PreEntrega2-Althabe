@@ -1,0 +1,8 @@
+/* Estilos para el contenedor principal */
+.ItemDetailContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajusta la altura según el diseño de tu aplicación */
+  }
+  

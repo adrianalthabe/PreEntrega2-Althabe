@@ -1,0 +1,134 @@
+/* Resetear estilos por defecto del navegador */
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+    margin: 0;
+    padding: 0;
+    
+    
+  }
+  
+  
+  body {
+    font-family: monospace;
+    line-height: 1.6;
+    color: #f384e4;
+    
+  }
+  
+
+  
+  /* Estilos para la barra de navegación */
+  nav {
+    background-color:  #424444;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  nav h3 {
+    font-size: 24px;
+    
+  }
+  
+  nav button {
+    background-color: transparent;
+    border: none;
+    color: #f384e4 ;
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 26px;
+    transition: color 0.3s ease;
+  }
+  
+  nav button:hover {
+    color:  #6cebfb 
+  }
+  
+  /* Estilos para los botones */
+  button {
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color:   #939593  ;
+    transform: scale(1.35);
+    -webkit-transform: scale(1.35);
+    -moz-transform: scale(1.35);
+    -ms-transform: scale(1.35);
+    -o-transform: scale(1.35);
+}
+  
+
+  
+  /* Estilos para el título "Articulos" */
+  .title {
+    text-align: center;
+  }
+
+  
+  /* Estilos responsive */
+  @media screen and (max-width: 768px) {
+    /* Cambiar el tamaño de la fuente para dispositivos móviles */
+    nav h3 {
+      font-size: 20px;
+    }
+  
+    /* Alinear verticalmente los botones en dispositivos móviles */
+    nav div {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    /* Márgenes y padding más ajustados en dispositivos móviles */
+    .container, .section, .profile-card {
+      margin: 10px;
+      padding: 10px;
+    }
+  
+    /* Ajustar el tamaño de la fuente en dispositivos móviles */
+    .title {
+      font-size: 28px;
+    }
+  }
+  
+
+h1 {
+  font-size: 18px; /* Tamaño de la fuente */
+  color:  #7cac50 ; /* Color del texto */
+  text-align: right; /* Alineación del texto Cerca de Carrito */
+  font-weight: bold; /* Negrita */
+  text-transform: uppercase; /* Convertir el texto a mayúsculas */
+  margin-bottom: 0px; /* Espaciado inferior */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra del texto */
+}
+
+
+/* Estilos para el elemento <p> */
+p {
+  font-size: 16px; /* Tamaño de la fuente */
+  color: #939593; /* Color del texto */
+  line-height: 1.6; /* Espaciado entre líneas */
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+
+/* Estilos para la imagen del carrito de compras */
+.cart-widget {
+  max-width: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transiciones para transformación y sombra */
+  margin-left: 10px; /* Agregar un margen izquierdo de 10px */
+  cursor: pointer; /* Cambiar el cursor al pasar el mouse sobre la imagen */
+  transform-origin: center; /* Establecer el punto de origen de la transformación en el centro de la imagen */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Agregar una sombra a la imagen */
+}
+
+.cart-widget:hover {
+  transform: scale(1.1) rotate(5deg); /* Aplicar el efecto de zoom y rotación al pasar el mouse */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Cambiar la sombra al pasar el mouse */
+}

@@ -1,0 +1,28 @@
+
+
+
+/* Estilos para la lista de productos */
+.ListGroup {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px
+}
+
+.option {
+  background-color: transparent;
+  border: none;
+  color: #f384e4 ;
+  margin-left: 20px;
+  cursor: pointer;
+  font-size: 26px;
+  transition: color 0.3s ease;
+}
+
+.option:hover {
+  color:  #6cebfb 
+}
+
+
+
