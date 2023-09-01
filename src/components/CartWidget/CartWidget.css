@@ -1,0 +1,18 @@
+.CartWidget {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.CartImg {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/* Estilo para ocultar el carrito cuando no hay elementos en el carrito */
+.CartWidget[style*="display: none"] {
+  display: none;
+}
