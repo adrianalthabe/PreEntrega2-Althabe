@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+button, input, optgroup, select, textarea {
+    margin: 20px;
+    border-width: thin;
+  }

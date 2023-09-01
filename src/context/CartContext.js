@@ -26,7 +26,13 @@ export const CartProvider = ({ children }) => {
     if (!isInCart(item.id)) {
       setCart((prev) => [...prev, { ...item, quantity }]);
     } else {
-      console.error("El producto ya fue agregado");
+      // Actualizar la cantidad del producto en el carrito
+      const updatedCart = cart.map((cartItem) =>
+        cartItem.id === item.id
+          ? { ...cartItem, quantity: cartItem.quantity + quantity }
+          : cartItem
+      );
+      setCart(updatedCart);
     }
   };
 
