@@ -1,0 +1,50 @@
+/* Estilo para el contenedor principal del carrito */
+#CartContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  /* Estilo para el total del carrito */
+  #CartTotal {
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  /* Estilo para los botones del carrito */
+  #CartButtons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .CartButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .CartButton:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilo para el mensaje cuando el carrito está vacío */
+  h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+
+  
