@@ -15,6 +15,8 @@ import {
   updateDoc
 } from "firebase/firestore";
 import { useEffect, useState } from "react";
+import Checkout from './components/Checkout/Checkout';
+
 
 import "./App.css";
 import { CartProvider } from "./context/CartContext";
@@ -52,17 +54,11 @@ function App() {
     getProductsList();
   };
 
-  const deleteProduct = async (id) => {
-    const productsDoc = doc(db, "products", id);
-    await deleteDoc(productsDoc);
-    getProductsList();
-  };
-
-  const updateProductName = async (id) => {
-    const productsDoc = doc(db, "products", id);
-    await updateDoc(productsDoc, { name: updatedName });
-    getProductsList();
-  };
+  // Se eliminan varias funciones y se alojan en ReportWebVitals.js 
+  // Personalmente las retiro por riesgo a borrar datos en Firebase
+  // listas para pegar aqui en App.js y funcionaran perfectamente
+  // usted podra borrar items , actualizarlos, cambiarles el nombre y agregar productos.
+  
 
   return (
     <div className="App">
@@ -87,52 +83,14 @@ function App() {
             />
             <Route path="/item/:itemId" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} / >
             <Route path="*" element={<h1>404 NOT FOUND</h1>} />
           </Routes>
         </CartProvider>
       </BrowserRouter>
+{
 
-      <div>
-        <div>
-          <h2>Nuevo producto</h2>
-          <input
-            placeholder="name"
-            onChange={(e) => setNewProductsName(e.target.value)}
-          />
-          <input
-            placeholder="price"
-            onChange={(e) => setNewProductsPrice(Number(e.target.value))}
-          />
-          <input
-            placeholder="stock"
-            onChange={(e) => setNewProductsStock(Number(e.target.value))}
-          />
-          <button onClick={onSubmitTitle}>Enviar</button>
-        </div>
-
-        <div>
-          {productsList.map((product) => (
-            <div key={product.id}>
-              <h2>{product.name}</h2>
-              <p>{product.price}</p>
-              <p>{product.stock}</p>
-              <div>
-                <button onClick={() => deleteProduct(product.id)}>
-                  Eliminar
-                </button>
-                <input
-                  type="text"
-                  placeholder="Nuevo nombre"
-                  onChange={(e) => setUpdatedName(e.target.value)}
-                />
-                <button onClick={() => updateProductName(product.id)}>
-                  Actualizar nombre
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+}
     </div>
   );
 }

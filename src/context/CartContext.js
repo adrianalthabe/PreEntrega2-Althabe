@@ -1,25 +1,29 @@
 import { createContext, useState, useEffect } from "react";
 
 export const CartContext = createContext({
-  cart: []
-  //totalQuantity: 0
+  cart: [],
+  total: 0
 });
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [totalQuantity, setTotalQuantity] = useState(0);
+  const [total, setTotal] = useState(0);
 
   useEffect(() => {
     // Calcular la cantidad total y actualizar totalQuantity
-    const calculateTotalQuantity = () => {
-      const totalQuantity = cart.reduce(
-        (total, item) => total + item.quantity,
-        0
-      );
-      setTotalQuantity(totalQuantity);
-    };
+    const totalQuantity = cart.reduce(
+      (total, item) => total + item.quantity,
+      0
+    );
+    setTotalQuantity(totalQuantity);
 
-    calculateTotalQuantity();
+    // Calcular el total
+    const totalValue = cart.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
+    setTotal(totalValue);
   }, [cart]);
 
   const addItem = (item, quantity) => {
@@ -38,7 +42,6 @@ export const CartProvider = ({ children }) => {
 
   const removeItem = (itemId) => {
     const cartUpdated = cart.filter((item) => item.id !== itemId);
-
     setCart(cartUpdated);
   };
 
@@ -52,9 +55,11 @@ export const CartProvider = ({ children }) => {
 
   return (
     <CartContext.Provider
-      value={{ cart, addItem, removeItem, clearCart, totalQuantity }}
+      value={{ cart, addItem, removeItem, clearCart, totalQuantity, total }}
     >
       {children}
     </CartContext.Provider>
   );
 };
+
+export default CartProvider;

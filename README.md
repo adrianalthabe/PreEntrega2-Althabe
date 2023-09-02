@@ -68,3 +68,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+Castellano > Preste atencion a varias funciones reportadas en ReportWebVitals.js y comentarios en codigos con App.js
+
+Sobre cualquier consulta no dude en encontrarnos por Git.
+
+Este es solo un proyecto base, utilizando Firebase para la obtension de los datos.
+
+xxxxxxxxxxxxxxxx Adrian Althabe xxxxxxxxxxxxxxxx
